@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Zeus Home</title>
+</head>
+<body>
+    <section>
+        <h1>Static String</h1>
+    </section>
+    <section>
+        <h1>Dynamic String</h1>
+        <p>Name 1: <span th:text="${name}">... Some name ...</span></p>
+        <p>Surname 1: <span th:text="${surname}">... Some surname ...</span></p>
+    </section>
+    <section>
+        <h1>Obj</h1>
+        <p>Name 2: <span th:text="${person.name}">... Some name ...</span></p>
+        <p>Surname 2: <span th:text="${person.surname}">... Some surname ...</span></p>
+        <p>Age 2: <span th:text="${person.age}">... Some age ...</span></p>
+    </section>
+    <section>
+        <h1>List</h1>
+        <div th:each="person : ${persons}">
+            <p>Name : <span th:text="${person.name}">... Some name ...</span></p>
+            <p>Surname : <span th:text="${person.surname}">... Some surname ...</span></p>
+            <p>Age : <span th:text="${person.age}">... Some age ...</span></p>
+            <p>________________________________________________________</p>
+        </div>
+    </section>
+
+
+</body>
+</html>
